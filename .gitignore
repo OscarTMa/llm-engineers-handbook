@@ -1,0 +1,26 @@
+# Entornos virtuales
+.venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# MLOps / Artifacts locales
+*.log
+data/raw/
+data/processed/
+artifacts/
+models/
+
+# Variables de entorno
+.env
+
+# VS Code local state
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
