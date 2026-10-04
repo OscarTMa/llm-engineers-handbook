@@ -1,0 +1,26 @@
+version: "1.0"
+
+cleaning:
+  remove_extra_whitespace: true
+  min_length_threshold: 20
+
+chunking:
+  articles:
+    chunk_size: 300
+    chunk_overlap: 50
+  posts:
+    chunk_size: 200
+    chunk_overlap: 20
+  code:
+    chunk_size: 400
+    chunk_overlap: 40
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+  metric: "cosine"
+
+storage:
+  raw_data_dir: "data/raw"
+  artifacts_dir: "data/artifacts"
+  vector_db_cache: "data/vector_store.json"
