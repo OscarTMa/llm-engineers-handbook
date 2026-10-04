@@ -51,9 +51,9 @@ The system implements the decoupled **Feature / Training / Inference (FTI)** arc
 | **01** | **LLM Twin Concept & FTI Architecture** | Completed | `chapter01_fundamentals/` |
 | **02** | **Data Engineering & Crawling Pipeline** | Planned | `chapter02_data_collection/` |
 | **03** | **Feature Store, Chunking & Vector DB** | Planned | `chapter03_feature_pipeline/` |
-| **04** | **Instruction Fine-Tuning (SFT & QLoRA)** | Planned | `chapter04_training/` |
-| **05** | **Preference Alignment (DPO / RLHF)** | Planned | `chapter05_alignment/` |
-| **06** | **RAG & Advanced Semantic Retrieval** | Planned | `chapter06_rag/` |
+| **04** | **RAG Feature Pipeline & Vector Databases** | ✅ Completed | `chapter04_rag_feature_pipeline/` |
+| **05** | **The Instruction Dataset Pipeline** | ✅ Completed | `chapter05_instruction_dataset/` |
+| **06** | **Supervised Fine-Tuning (SFT & QLoRA)** | ⚪ Planned | `chapter06_training/` |
 | **07** | **LLM Evaluation & Observability** | Planned | `chapter07_evaluation/` |
 | **08** | **High-Throughput Inference & Serving** | Planned | `chapter08_serving/` |
 

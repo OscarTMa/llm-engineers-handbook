@@ -1,0 +1,15 @@
+version: "1.0"
+
+dataset_generation:
+  author_name: "Oscar Tibaduiza"
+  target_format: "chatml"  # "alpaca" o "chatml"
+  max_records: 500
+
+curation:
+  min_output_characters: 30
+  max_output_characters: 4000
+  deduplicate_by_content: true
+
+storage:
+  output_dir: "data/artifacts/datasets"
+  output_filename: "instruct_dataset_v1.jsonl"
