@@ -1,0 +1,21 @@
+author: "Oscar Tibaduiza"
+
+targets:
+  github:
+    enabled: true
+    usernames:
+      - "OscarTMa"
+    categories:
+      - "code"
+
+  medium:
+    enabled: true
+    sources:
+      - url: "https://medium.com/@sample-user/building-scalable-rag-systems"
+        category: "articles"
+
+  linkedin:
+    enabled: true
+    sources:
+      - category: "posts"
+        batch_size: 10
