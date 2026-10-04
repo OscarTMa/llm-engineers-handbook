@@ -1,0 +1,6 @@
+parameters:
+  author_full_names:
+    - "Oscar Tibaduiza"
+  batch_size: 16
+  clean_urls: true
+  clean_emojis: true
