@@ -1,0 +1,36 @@
+version: "1.0"
+
+model:
+  base_model_name: "meta-llama/Meta-Llama-3.1-8B"
+  max_seq_length: 2048
+  load_in_4bit: true
+
+lora:
+  r: 32
+  lora_alpha: 32
+  lora_dropout: 0.0
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+
+training_arguments:
+  learning_rate: 0.0003
+  lr_scheduler_type: "linear"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8
+  weight_decay: 0.01
+  warmup_steps: 10
+  logging_steps: 1
+  packing: true
+  optim: "adamw_8bit"
+
+storage:
+  raw_articles_path: "data/raw"
+  output_dataset_path: "data/artifacts/sft_dataset/instruct_alpaca.jsonl"
+  output_adapter_dir: "models/sft_checkpoints/llama3_twin_adapter"
