@@ -1,5 +1,7 @@
 from abc import ABC
 from typing import Any, Dict, List, Optional
+import uuid
+from pydantic import Field
 from chapter04_rag_feature_pipeline.src.domain.base import DataCategory, VectorBaseDocument
 
 
@@ -43,7 +45,7 @@ class CleanedRepositoryDocument(CleanedDocument):
 class Chunk(VectorBaseDocument, ABC):
     content: str
     platform: str
-    document_id: str
+    document_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     author_id: str
     author_full_name: str
     metadata: Dict[str, Any] = {}
@@ -74,7 +76,7 @@ class EmbeddedChunk(VectorBaseDocument, ABC):
     content: str
     embedding: List[float]
     platform: str
-    document_id: str
+    document_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     author_id: str
     author_full_name: str
     metadata: Dict[str, Any] = {}

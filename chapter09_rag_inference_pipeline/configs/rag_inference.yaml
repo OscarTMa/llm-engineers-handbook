@@ -1,0 +1,18 @@
+version: "1.0"
+
+retrieval:
+  top_k: 3
+  expand_to_n_queries: 3
+  embedding_model_id: "sentence-transformers/all-MiniLM-L6-v2"
+  reranking_model_id: "cross-encoder/ms-marco-MiniLM-L-4-v2"
+  device: "cpu"
+
+inference:
+  mock_mode: false
+  sagemaker_endpoint_name: "twin-llama-3-1-8b-endpoint"
+  temperature: 0.7
+  max_new_tokens: 256
+
+storage:
+  telemetry_dir: "data/rag_inference_telemetry"
+  report_file: "rag_inference_execution.json"
