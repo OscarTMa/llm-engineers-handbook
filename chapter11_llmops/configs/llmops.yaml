@@ -1,0 +1,33 @@
+version: "1.0"
+
+zenml:
+  stack_name: "aws-stack"
+  orchestrator: "sagemaker"
+  artifact_store: "s3"
+  container_registry: "ecr"
+  synchronous: false
+
+guardrails:
+  enable_pii_filtering: true
+  enable_jailbreak_detection: true
+  enable_output_verification: true
+  blocked_patterns:
+    - "ignore previous instructions"
+    - "system prompt override"
+    - "reveal secret keys"
+
+monitoring:
+  project_name: "llm-twin-production"
+  enable_opik_tracing: true
+  log_token_statistics: true
+  alert_on_high_latency_threshold_sec: 2.5
+
+alerting:
+  channel: "slack"
+  webhook_url: "https://hooks.slack.com/services/mock/token"
+  notify_on_success: true
+  notify_on_failure: true
+
+storage:
+  telemetry_dir: "data/llmops_telemetry"
+  report_file: "llmops_execution_report.json"

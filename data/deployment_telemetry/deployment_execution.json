@@ -1,0 +1,28 @@
+{
+  "deployment": {
+    "model_name": "twin-llama-3-1-8b-endpoint-model",
+    "endpoint_config_name": "twin-llama-3-1-8b-config",
+    "endpoint_name": "twin-llama-3-1-8b-endpoint",
+    "instance_type": "ml.g5.xlarge",
+    "container_engine": "Hugging Face Text Generation Inference (TGI DLC)",
+    "quantization": "bitsandbytes-4bit",
+    "status": "InService"
+  },
+  "autoscaling": {
+    "resource_id": "endpoint/twin-llama-3-1-8b-endpoint/variant/AllTraffic",
+    "min_capacity": 1,
+    "max_capacity": 4,
+    "target_value": 70,
+    "scale_out_cooldown": 60,
+    "scale_in_cooldown": 300,
+    "status": "Configured"
+  },
+  "test_call": {
+    "query": "I am Oscar Tibaduiza. How do microservice architectures optimize LLM serving?",
+    "answer": "Decoupled machine learning systems isolate Feature, Training, and Inference pipelines to prevent training-serving skew. In production, this allows serving real-time requests with low latency via AWS SageMaker while running heavy ETL pipelines independently.",
+    "grounding_references": 3,
+    "metadata": {
+      "endpoint": "twin-llama-3-1-8b-endpoint"
+    }
+  }
+}

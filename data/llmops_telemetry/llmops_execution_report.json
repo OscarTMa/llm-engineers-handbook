@@ -1,0 +1,86 @@
+{
+  "guardrails_test": {
+    "unsafe_blocked": false,
+    "sanitized_input": "I am Oscar Tibaduiza. How does continuous training automate model deployment?",
+    "output_verified": true
+  },
+  "continuous_training": {
+    "status": "success",
+    "pipeline": "end_to_end_data",
+    "details": {
+      "documents": 3,
+      "chunks": 9,
+      "dataset_samples": 12,
+      "model_res": {
+        "eval_loss": 1.28,
+        "status": "Deployed"
+      }
+    }
+  },
+  "opik_trace": {
+    "trace_id": "d5edaa27-04f7-4a55-a63d-7b97a59b4f80",
+    "project_name": "llm-twin-production",
+    "user_query": "I am Oscar Tibaduiza. How does continuous training automate model deployment?",
+    "prompt_tokens": 22,
+    "completion_tokens": 40,
+    "total_tokens": 62,
+    "total_duration_ms": 80.22,
+    "time_to_first_token_ms": 20.06,
+    "tokens_per_second": 664.84,
+    "spans": [
+      {
+        "span_id": "8c2024cc",
+        "name": "etl_extraction_step",
+        "duration_ms": 0.04,
+        "inputs": {
+          "args_count": 1
+        },
+        "outputs": {
+          "result_type": "<class 'int'>"
+        }
+      },
+      {
+        "span_id": "da661f1f",
+        "name": "rag_feature_step",
+        "duration_ms": 0.04,
+        "inputs": {
+          "args_count": 1
+        },
+        "outputs": {
+          "result_type": "<class 'int'>"
+        }
+      },
+      {
+        "span_id": "ba2fd9d9",
+        "name": "instruction_synthesis_step",
+        "duration_ms": 0.04,
+        "inputs": {
+          "args_count": 1
+        },
+        "outputs": {
+          "result_type": "<class 'int'>"
+        }
+      },
+      {
+        "span_id": "dece933a",
+        "name": "training_step",
+        "duration_ms": 0.04,
+        "inputs": {
+          "args_count": 1
+        },
+        "outputs": {
+          "result_type": "<class 'dict'>"
+        }
+      }
+    ],
+    "tags": [
+      "rag",
+      "production",
+      "llm-twin"
+    ],
+    "metadata": {
+      "model": "TwinLlama-3.1-8B-DPO",
+      "environment": "aws-production"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "rag_evaluation": {
+    "query": "Why do we decouple Feature and Inference pipelines in RAG?",
+    "context": "Decoupled pipelines avoid training-serving skew and allow caching vector embeddings independently.",
+    "answer": "Decoupling feature extraction from serving avoids training-serving skew and makes embeddings reusable.",
+    "faithfulness": 0.65,
+    "answer_relevance": 0.7,
+    "context_precision": 0.88,
+    "context_recall": 0.72
+  },
+  "model_benchmarks": [
+    {
+      "model_name": "Base Instruct",
+      "average_accuracy": 2.62,
+      "average_style": 1.86,
+      "total_evaluated": 3
+    },
+    {
+      "model_name": "TwinLlama SFT",
+      "average_accuracy": 2.45,
+      "average_style": 2.04,
+      "total_evaluated": 3
+    },
+    {
+      "model_name": "TwinLlama DPO",
+      "average_accuracy": 2.46,
+      "average_style": 2.12,
+      "total_evaluated": 3
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "model_spec": {
+    "target_model": "meta-llama/Meta-Llama-3.1-8B",
+    "draft_model": "meta-llama/Llama-3.2-1B",
+    "num_layers": 32,
+    "num_heads": 32,
+    "head_dim": 128,
+    "bytes_per_param": 2
+  },
+  "kv_cache_analysis": {
+    "num_tokens": 4096,
+    "num_layers": 32,
+    "num_heads": 32,
+    "head_dim": 128,
+    "bytes_per_param": 2,
+    "cache_size_bytes": 2147483648,
+    "cache_size_mb": 2048.0,
+    "cache_size_gb": 2.0
+  },
+  "continuous_batching": {
+    "total_requests": 6,
+    "total_steps": 60,
+    "throughput_tokens_per_step": 2.68
+  },
+  "speculative_decoding": {
+    "lookahead_k": 5,
+    "avg_accepted_tokens": 2.5,
+    "net_speedup_factor": 2.33
+  },
+  "quantization_benchmarks": {
+    "absmax_mse": 0.000955,
+    "zeropoint_mse": 0.000625,
+    "memory_reduction_pct": 50.0
+  }
+}
