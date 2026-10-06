@@ -68,7 +68,7 @@ flowchart TD
     PostTrain --> Align_Metrics[Instruction Following: IFEval, AlpacaEval]
     PostTrain --> Arena[Human Preference: LMSYS Chatbot Arena, MT-Bench]
 
-    Specific --> Domain[Medical: MedQA | Code: BigCodeBench | Finance: FinanceBench]
+    Specific --> Domain["Medical: MedQA | Code: BigCodeBench | Finance: FinanceBench"]
     Specific --> Task[MCQ Answering, ROUGE Summaries, LLM Judge]
 
     SystemRAG --> Ragas_Framework[Ragas: Faithfulness, Relevancy, Precision, Recall]
