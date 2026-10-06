@@ -56,7 +56,8 @@ The system implements the decoupled **Feature / Training / Inference (FTI)** arc
 | **05A** | **Supervised Fine-Tuning (SFT) & Unsloth** | ✅ Completed | `chapter05A_supervised_fine_tuning/` |
 | **06** | **Preference Alignment (DPO)** | ✅ Completed | `chapter06_preference_alignment/` |
 | **07** | **LLM & RAG Evaluation (Ragas & Judge)** | ✅ Completed | `chapter07_evaluation/` |
-| **08** | **High-Throughput Inference & Serving** | ⚪ Planned | `chapter08_serving/` |
+| **08** | **High-Throughput Inference & Serving** | ✅ Completed | `chapter08_inference_optimization/` |
+| **09** | **The End-to-End LLM Twin System** | ⚪ Planned | `chapter09_production_system/` |
 ---
 
 ## Repository Structure

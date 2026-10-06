@@ -1,0 +1,29 @@
+version: "1.0"
+
+model:
+  target_model: "meta-llama/Meta-Llama-3.1-8B"
+  draft_model: "meta-llama/Llama-3.2-1B"
+  num_layers: 32
+  num_heads: 32
+  head_dim: 128
+  bytes_per_param: 2  # FP16 / BF16
+
+kv_cache:
+  max_sequence_length: 4096
+  use_static_cache: true
+
+continuous_batching:
+  max_batch_size: 8
+  waiting_served_ratio: 1.2
+
+quantization:
+  method: "absmax"  # "absmax", "zeropoint", "mixed_int8"
+  precision_bits: 8
+
+speculative_decoding:
+  lookahead_k: 5
+  estimated_acceptance_rate: 0.80
+
+storage:
+  telemetry_dir: "data/inference_telemetry"
+  report_file: "optimization_benchmarks.json"
