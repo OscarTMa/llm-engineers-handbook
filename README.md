@@ -57,7 +57,9 @@ The system implements the decoupled **Feature / Training / Inference (FTI)** arc
 | **06** | **Preference Alignment (DPO)** | ✅ Completed | `chapter06_preference_alignment/` |
 | **07** | **LLM & RAG Evaluation (Ragas & Judge)** | ✅ Completed | `chapter07_evaluation/` |
 | **08** | **High-Throughput Inference & Serving** | ✅ Completed | `chapter08_inference_optimization/` |
-| **09** | **The End-to-End LLM Twin System** | ⚪ Planned | `chapter09_production_system/` |
+| **09** | **RAG Inference Pipeline & Advanced Retrieval** | ✅ Completed | `chapter09_rag_inference_pipeline/` |
+| **10** | **Inference Pipeline Deployment (SageMaker & FastAPI)** | ✅ Completed | `chapter10_inference_deployment/` |
+| **11** | **LLMOps, Monitoring & Continuous Training** | ⚪ Planned | `chapter11_llmops/` |
 ---
 
 ## Repository Structure

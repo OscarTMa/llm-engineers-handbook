@@ -1,0 +1,27 @@
+version: "1.0"
+
+aws:
+  region: "us-east-1"
+  endpoint_name: "twin-llama-3-1-8b-endpoint"
+  endpoint_config_name: "twin-llama-3-1-8b-config"
+  gpu_instance_type: "ml.g5.xlarge"
+  hf_model_id: "mlabonne/TwinLlama-3.1-8B-DPO"
+  max_input_length: 2048
+  max_total_tokens: 4096
+  sm_num_gpus: 1
+
+autoscaling:
+  min_capacity: 1
+  max_capacity: 4
+  target_invocations_per_copy: 70
+  scale_out_cooldown: 60
+  scale_in_cooldown: 300
+
+server:
+  host: "127.0.0.1"
+  port: 8000
+  reload: false
+
+storage:
+  telemetry_dir: "data/deployment_telemetry"
+  report_file: "deployment_execution.json"
