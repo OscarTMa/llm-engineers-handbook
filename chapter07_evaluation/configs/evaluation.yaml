@@ -1,0 +1,30 @@
+version: "1.0"
+
+models_to_evaluate:
+  - id: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+    name: "Base Instruct"
+  - id: "mlabonne/TwinLlama-3.1-8B"
+    name: "TwinLlama SFT"
+  - id: "mlabonne/TwinLlama-3.1-8B-DPO"
+    name: "TwinLlama DPO"
+
+judge:
+  model_id: "gpt-4o-mini"
+  temperature: 0.2
+  criteria:
+    - name: "accuracy"
+      scale_min: 1
+      scale_max: 3
+    - name: "style"
+      scale_min: 1
+      scale_max: 3
+
+ragas_thresholds:
+  min_faithfulness: 0.80
+  min_answer_relevance: 0.75
+  min_context_precision: 0.70
+  min_context_recall: 0.70
+
+storage:
+  results_dir: "data/evaluation_results"
+  output_report: "benchmark_report.json"
